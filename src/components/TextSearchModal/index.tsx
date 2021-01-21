@@ -1,5 +1,6 @@
 import React from "react";
 import { SearchText } from "../../models/SearchText";
+import { renderStatusColor } from "../../utils/renderStatusColor";
 import "./styles.css";
 
 interface TextSearchModalProps {
@@ -7,18 +8,8 @@ interface TextSearchModalProps {
 }
 
 const TextSearchModal = ({ searchText }: TextSearchModalProps) => {
-  const renderStatusColor = (status: string) => {
-    switch (status) {
-      case "done":
-        return "#4cb919";
-      case "active":
-        return "#b9af19";
-      default:
-        return "#ccc";
-    }
-  };
-
   const statusColor = renderStatusColor(searchText.status);
+
   return (
     <div className="search-card">
       <h3>{searchText.id}</h3>
