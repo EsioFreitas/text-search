@@ -1,0 +1,26 @@
+.backdrop-open {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #35353550;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.modal-open {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px #35353510;
+}
+
+.backdrop-close {
+  height: 0;
+}
+
+.modal-close {
+  display: none;
+}

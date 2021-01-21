@@ -1,4 +1,4 @@
-export const renderStatusColor = (status: string) => {
+export const renderStatusColor = (status: string | null) => {
   switch (status) {
     case "done":
       return "#4cb919";

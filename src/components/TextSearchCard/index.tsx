@@ -5,9 +5,10 @@ import "./styles.css";
 
 interface TextSearchCardProps {
   searchText: SearchText;
+  toggle: Function;
 }
 
-const TextSearchCard = ({ searchText }: TextSearchCardProps) => {
+const TextSearchCard = ({ searchText, toggle }: TextSearchCardProps) => {
   const statusColor = renderStatusColor(searchText.status);
 
   return (
@@ -18,7 +19,7 @@ const TextSearchCard = ({ searchText }: TextSearchCardProps) => {
           <div style={{ backgroundColor: statusColor }} />
           <span style={{ color: statusColor }}>{searchText.status}</span>
         </div>
-        <button>View</button>
+        <button onClick={() => toggle(searchText)}>View</button>
       </div>
     </div>
   );

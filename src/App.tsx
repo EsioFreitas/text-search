@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import TextSearchCard from "./components/TextSearchCard";
+import TextSearchModal from "./components/TextSearchModal";
 import { SearchText } from "./models/SearchText";
 import api from "./services/Api";
 
@@ -8,6 +9,10 @@ function App() {
   const [searchString, setSearchString] = useState("");
   const [searchTexts, setSearchTexts] = useState<SearchText[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const [
+    selectedSearchText,
+    setSelectedSearchText,
+  ] = useState<SearchText | null>(null);
 
   useEffect(() => {
     let timeSearchText = setInterval(() => getSearchText(), 1500);
@@ -49,8 +54,17 @@ function App() {
     });
   };
 
+  const toggle = (searchText = null) => {
+    setSelectedSearchText(searchText);
+  };
+
   return (
     <>
+      <TextSearchModal
+        isOpen={selectedSearchText !== null}
+        searchText={selectedSearchText}
+        toggle={toggle}
+      />
       {errorMessage.length > 0 && (
         <h3 className="error-message">{errorMessage}</h3>
       )}
@@ -76,7 +90,7 @@ function App() {
           <h2>Text search list</h2>
           <div>
             {searchTexts.map((searchText, i) => (
-              <TextSearchCard key={i} searchText={searchText} />
+              <TextSearchCard key={i} searchText={searchText} toggle={toggle} />
             ))}
           </div>
         </main>

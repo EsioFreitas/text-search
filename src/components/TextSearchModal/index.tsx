@@ -4,23 +4,27 @@ import { renderStatusColor } from "../../utils/renderStatusColor";
 import "./styles.css";
 
 interface TextSearchModalProps {
-  searchText: SearchText;
+  searchText: SearchText | null;
+  isOpen: boolean;
+  toggle: Function;
 }
 
-const TextSearchModal = ({ searchText }: TextSearchModalProps) => {
-  const statusColor = renderStatusColor(searchText.status);
+const TextSearchModal = ({
+  searchText,
+  isOpen,
+  toggle,
+}: TextSearchModalProps) => {
+  const statusColor = renderStatusColor(searchText ? searchText.status : null);
 
   return (
-    <div className="search-card">
-      <h3>{searchText.id}</h3>
-      <div>
-        <div className="search-status">
-          <div style={{ backgroundColor: statusColor }} />
-          <span style={{ color: statusColor }}>{searchText.status}</span>
-        </div>
-        <button>View</button>
+    <>
+      <div
+        className={isOpen ? "backdrop-open" : "backdrop-close"}
+        onClick={() => toggle()}
+      >
+        <div className={isOpen ? "modal-open" : "modal-close"}>Modal</div>
       </div>
-    </div>
+    </>
   );
 };
 
