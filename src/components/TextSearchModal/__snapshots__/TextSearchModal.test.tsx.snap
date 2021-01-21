@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextSearchCard tests should render TextSearchCard component 1`] = `
+<div>
+  <div
+    class="backdrop-close"
+  >
+    <div
+      class="modal-close"
+    >
+      <h3
+        class="modal-title"
+      >
+        efadasdas
+      </h3>
+      <h4
+        class="modal-subtitle"
+        style="color: rgb(185, 175, 25);"
+      >
+        active
+      </h4>
+      <div
+        class="image-container image-container-card"
+      >
+        <img
+          alt="void"
+          src="void.svg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

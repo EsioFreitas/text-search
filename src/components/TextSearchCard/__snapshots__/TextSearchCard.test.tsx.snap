@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextSearchCard tests should render TextSearchCard component 1`] = `
+<div>
+  <div
+    class="search-card"
+  >
+    <h3 />
+    <h4 />
+    <div>
+      <div
+        class="search-status"
+      >
+        <div
+          style="background-color: rgb(204, 204, 204);"
+        />
+        <span
+          style="color: rgb(204, 204, 204);"
+        />
+      </div>
+      <button>
+        View
+      </button>
+    </div>
+  </div>
+</div>
+`;
