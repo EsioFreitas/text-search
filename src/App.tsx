@@ -4,15 +4,13 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <header>
+      <header className="search-container">
+        <h1>Text Search</h1>
         <div>
-          <h1>Text Search</h1>
           <div>
             <input />
             <button>Pesquisar</button>
           </div>
-        </div>
-        <div>
           <ul>
             <li>
               <div /> Status
@@ -20,7 +18,20 @@ function App() {
           </ul>
         </div>
       </header>
-      <main>card list</main>
+      <main>
+        <h2>Text search list</h2>
+        <div className="search-list">
+          <div>
+            <h2>Titulo do card</h2>
+            <div>
+              <div>
+                <div /> Status
+              </div>
+              <button>Visualizar</button>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
