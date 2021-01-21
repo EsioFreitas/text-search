@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import TextSearchCard from "./components/TextSearchCard";
 import { SearchText } from "./models/SearchText";
@@ -8,6 +8,25 @@ function App() {
   const [searchString, setSearchString] = useState("");
   const [searchTexts, setSearchTexts] = useState<SearchText[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    let timeSearchText = setInterval(() => getSearchText(), 1500);
+    return () => {
+      clearTimeout(timeSearchText);
+    };
+  });
+
+  const getSearchText = () => {
+    searchTexts.forEach((searchText, index) => {
+      if (searchText.status === "active") {
+        api.get("/crawl/" + searchText.id).then(({ data }) => {
+          const tmpSearchTexts = [...searchTexts];
+          tmpSearchTexts[index] = data;
+          setSearchTexts(tmpSearchTexts);
+        });
+      }
+    });
+  };
 
   const makeNewSearchText = (searchString = "") => {
     api.post("/crawl", { keyword: searchString }).then(({ data }) => {
