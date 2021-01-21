@@ -24,8 +24,8 @@ code {
 button {
   background-color: #fa5a3f;
   border: none;
-  min-width: 179px;
-  padding: 12px 32px 14px;
+  min-width: 150px;
+  padding: 12px 32px;
   border-radius: 4px;
   text-decoration: none;
   color: #ffffff;

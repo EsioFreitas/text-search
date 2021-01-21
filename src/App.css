@@ -37,6 +37,6 @@
 
 .search-list > div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 340px);
+  grid-template-columns: repeat(auto-fill, 330px);
   gap: 2rem;
 }
