@@ -12,9 +12,9 @@ function App() {
           <button>Pesquisar</button>
         </div>
       </header>
-      <main>
+      <main className="search-list">
         <h2>Text search list</h2>
-        <div className="search-list">
+        <div>
           <TextSearchCard />
           <TextSearchCard />
           <TextSearchCard />

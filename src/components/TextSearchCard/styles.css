@@ -22,12 +22,13 @@
 .search-status {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .search-status div {
   background-color: teal;
-  height: 0.7rem;
-  width: 0.7rem;
+  height: 0.6rem;
+  width: 0.6rem;
   display: inline-block;
   border-radius: 50%;
   margin-right: .3rem;
