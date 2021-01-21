@@ -4,6 +4,7 @@ import TextSearchCard from "./components/TextSearchCard";
 import TextSearchModal from "./components/TextSearchModal";
 import { SearchText } from "./models/SearchText";
 import api from "./services/Api";
+import VoidPhoto from "./assets/images/void.svg";
 
 function App() {
   const [searchString, setSearchString] = useState("");
@@ -95,6 +96,11 @@ function App() {
             ))}
           </div>
         </main>
+        {searchTexts.length === 0 && (
+          <div className="image-container">
+            <img src={VoidPhoto} alt="void" className="void-image" />
+          </div>
+        )}
       </div>
     </>
   );

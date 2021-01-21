@@ -2,7 +2,7 @@ import React from "react";
 import { SearchText } from "../../models/SearchText";
 import { renderStatusColor } from "../../utils/renderStatusColor";
 import "./styles.css";
-
+import VoidPhoto from "../../assets/images/void.svg";
 interface TextSearchModalProps {
   searchText: SearchText | null;
   isOpen: boolean;
@@ -30,16 +30,22 @@ const TextSearchModal = ({
           <h4 className="modal-subtitle" style={{ color: statusColor }}>
             {searchText?.status}
           </h4>
-          <ul className="modal-list">
-            {searchText?.urls &&
-              searchText.urls.map((url) => (
+          {searchText?.urls && searchText?.urls.length > 0 && (
+            <ul className="modal-list">
+              {searchText.urls.map((url) => (
                 <li>
                   <a href={url} target="_blank">
                     {url}
                   </a>
                 </li>
               ))}
-          </ul>
+            </ul>
+          )}
+          {searchText?.urls && searchText?.urls.length === 0 && (
+            <div className="image-container image-container-card">
+              <img src={VoidPhoto} alt="void" />
+            </div>
+          )}
         </div>
       </div>
     </>

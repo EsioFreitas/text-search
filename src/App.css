@@ -40,3 +40,13 @@
   grid-template-columns: repeat(auto-fill, 330px);
   gap: 2rem;
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.void-image {
+  width: 35vw;
+  margin: 0 auto;
+}
