@@ -7,12 +7,27 @@ interface TextSearchCardProps {
 }
 
 const TextSearchCard = ({ searchText }: TextSearchCardProps) => {
+  const renderStatusColor = (status: string) => {
+    switch (status) {
+      case "done":
+        return "#4cb919";
+      case "active":
+        return "#b9af19";
+      default:
+        return "#ccc";
+    }
+  };
   return (
     <div className="search-card">
       <h3>{searchText.id}</h3>
       <div>
         <div className="search-status">
-          <div /> <span>{searchText.status}</span>
+          <div
+            style={{ backgroundColor: renderStatusColor(searchText.status) }}
+          />
+          <span style={{ color: renderStatusColor(searchText.status) }}>
+            {searchText.status}
+          </span>
         </div>
         <button>View</button>
       </div>

@@ -31,5 +31,9 @@
   width: 0.6rem;
   display: inline-block;
   border-radius: 50%;
-  margin-right: .3rem;
+  margin-right: 0.3rem;
+}
+
+.search-status span::first-letter {
+  text-transform: uppercase;
 }
