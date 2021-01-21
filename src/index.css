@@ -11,9 +11,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #353535;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  background-color: #fa5a3f;
+  border: none;
+  min-width: 179px;
+  padding: 12px 32px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12.6px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+  white-space: nowrap;
+}
+
+button:hover,
+button:active {
+  box-shadow: 0px 0px 1px #35353590;
+  transition: all 0.5s;
+  background-color: #f2420c;
+}
+
+input {
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0.7px;
+  min-width: 100%;
+  min-height: 48px;
+  max-width: 448px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  border-bottom: 2px solid rgb(221, 221, 221);
+  outline: none;
+  margin-bottom: 32px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  appearance: none;
+  border-radius: 0px;
 }

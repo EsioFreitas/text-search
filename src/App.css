@@ -1,12 +1,24 @@
 .search-container {
+  margin: 2rem;
 }
 
-.search-container h1 {
+.search-header {
+  margin-bottom: 2rem;
 }
 
-.search-container > div {
+.search-header h1 {
+  font-size: 4rem;
+}
+
+.search-input {
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+  margin: 1.5rem 0;
+  width: 50%;
+}
+
+.search-input input {
+  margin-right: 1rem;
 }
 
 .search-list {
