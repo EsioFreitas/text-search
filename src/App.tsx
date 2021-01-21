@@ -45,7 +45,10 @@ function App() {
               value={searchString}
               onChange={(event) => setSearchString(event.target.value)}
             />
-            <button onClick={() => makeNewSearchText(searchString)}>
+            <button
+              onClick={() => makeNewSearchText(searchString)}
+              disabled={searchString.length === 0}
+            >
               search
             </button>
           </div>
