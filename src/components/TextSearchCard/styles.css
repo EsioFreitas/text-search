@@ -1,0 +1,20 @@
+.search-card {
+  padding-top: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px 2px #ccc;
+}
+
+.search-card h3 {
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.search-card > div {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 0 0 0.5rem 0.5rem;
+}

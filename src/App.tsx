@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import TextSearchCard from "./components/TextSearchCard";
 
 function App() {
   return (
@@ -14,15 +15,9 @@ function App() {
       <main>
         <h2>Text search list</h2>
         <div className="search-list">
-          <div>
-            <h3>Titulo do card</h3>
-            <div>
-              <div>
-                <div /> Status
-              </div>
-              <button>Visualizar</button>
-            </div>
-          </div>
+          <TextSearchCard />
+          <TextSearchCard />
+          <TextSearchCard />
         </div>
       </main>
     </div>

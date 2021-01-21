@@ -3,10 +3,10 @@ import "./styles.css";
 
 const TextSearchCard: React.FC = () => {
   return (
-    <div>
+    <div className="search-card">
       <h3>Titulo do card</h3>
       <div>
-        <div>
+        <div className="search-status">
           <div /> Status
         </div>
         <button>Visualizar</button>
