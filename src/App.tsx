@@ -18,6 +18,9 @@ function App() {
           <TextSearchCard />
           <TextSearchCard />
           <TextSearchCard />
+          <TextSearchCard />
+          <TextSearchCard />
+          <TextSearchCard />
         </div>
       </main>
     </div>

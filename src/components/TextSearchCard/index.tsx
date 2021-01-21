@@ -7,7 +7,7 @@ const TextSearchCard: React.FC = () => {
       <h3>Titulo do card</h3>
       <div>
         <div className="search-status">
-          <div /> Status
+          <div /> <span>Status</span>
         </div>
         <button>Visualizar</button>
       </div>

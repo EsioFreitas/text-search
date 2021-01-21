@@ -18,3 +18,17 @@
   background-color: #eee;
   border-radius: 0 0 0.5rem 0.5rem;
 }
+
+.search-status {
+  display: flex;
+  align-items: center;
+}
+
+.search-status div {
+  background-color: teal;
+  height: 0.7rem;
+  width: 0.7rem;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: .3rem;
+}
