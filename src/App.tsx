@@ -20,6 +20,7 @@ function App() {
             urls: [],
           },
         ]);
+        setSearchString("");
       })
       .catch((error) => {});
   };
@@ -43,8 +44,8 @@ function App() {
       <main className="search-list">
         <h2>Text search list</h2>
         <div>
-          {searchTexts.map((searchText) => (
-            <TextSearchCard key={searchText.id} />
+          {searchTexts.map((searchText, i) => (
+            <TextSearchCard key={i} searchText={searchText} />
           ))}
         </div>
       </main>
