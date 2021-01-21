@@ -1,9 +1,15 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App tests", () => {
+  it("should App component return", () => {
+    const { baseElement } = render(<App />);
+    expect(baseElement).toBeTruthy();
+  });
+
+  it("should render App component", async () => {
+    const { container } = render(<App />);
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -1,4 +1,3 @@
-import { render, screen } from '@testing-library/react';
 import { renderStatusColor } from "../renderStatusColor"
 
 describe('render status color test', () => {
