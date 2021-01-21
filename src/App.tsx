@@ -22,7 +22,7 @@ function App() {
         <h2>Text search list</h2>
         <div className="search-list">
           <div>
-            <h2>Titulo do card</h2>
+            <h3>Titulo do card</h3>
             <div>
               <div>
                 <div /> Status
