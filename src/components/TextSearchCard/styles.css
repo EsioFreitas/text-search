@@ -5,9 +5,23 @@
   box-shadow: 1px 1px 5px 2px #ccc;
 }
 
+.search-card h3,
+.search-card h4 {
+  padding: 0 1rem;
+}
+
 .search-card h3 {
-  padding: 1rem;
-  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #f2420c;
+}
+
+.search-card::first-letter {
+  text-transform: uppercase;
+}
+
+.search-card h4 {
+  font-weight: normal;
+  margin-bottom: 1.5rem;
 }
 
 .search-card > div {

@@ -26,7 +26,7 @@ function App() {
       if (searchText.status === "active") {
         api.get("/crawl/" + searchText.id).then(({ data }) => {
           const tmpSearchTexts = [...searchTexts];
-          tmpSearchTexts[index] = data;
+          tmpSearchTexts[index] = { ...tmpSearchTexts[index], ...data };
           setSearchTexts(tmpSearchTexts);
         });
       }
@@ -45,6 +45,7 @@ function App() {
           ...searchTexts,
           {
             id: data.id,
+            title: searchString,
             status: "active",
             urls: [],
           },

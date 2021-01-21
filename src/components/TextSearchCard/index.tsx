@@ -13,7 +13,8 @@ const TextSearchCard = ({ searchText, toggle }: TextSearchCardProps) => {
 
   return (
     <div className="search-card">
-      <h3>{searchText.id}</h3>
+      <h3>{searchText.title}</h3>
+      <h4>{searchText.id}</h4>
       <div>
         <div className="search-status">
           <div style={{ backgroundColor: statusColor }} />

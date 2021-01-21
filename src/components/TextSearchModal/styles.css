@@ -24,3 +24,27 @@
 .modal-close {
   display: none;
 }
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #f2420c;
+}
+
+.modal-title::first-letter {
+  text-transform: uppercase;
+}
+
+.modal-subtitle {
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.modal-subtitle::first-letter {
+  text-transform: uppercase;
+}
+
+.modal-list {
+  height: 50vh;
+  width: 50vw;
+  overflow: auto;
+}
